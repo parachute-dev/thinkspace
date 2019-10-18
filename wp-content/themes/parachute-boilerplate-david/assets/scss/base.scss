@@ -1,0 +1,60 @@
+// Setup fonts, vars, functions, mixins, resets and base styles
+@import "base/vars";
+@import "base/reset";
+
+@import "helper/functions";
+@import "helper/mixins"; 
+@import "base/setup";
+
+// Vendor
+@import "vendor/bootstrap/bootstrap";
+@import "vendor/slick";
+
+@import "helper/helpers";
+
+// Animations
+@import "helper/animations";
+ 
+// Typography
+@import "base/typography";
+ 
+// Layout
+@import "layout/header";
+@import "layout/toolbar"; 
+@import "layout/sidebar";
+@import "layout/footer";  
+ 
+// Components 
+@import "components/dropdown";
+@import "components/buttons";
+@import "components/forms";
+@import "components/modals"; 
+@import "components/plugins";
+
+
+// Grid 
+@import "grid/banner";
+@import "grid/content";
+@import "grid/social";
+
+// Plugin base-style overrides
+@import "components/plugins";
+
+// Pages
+@import "pages/page";
+@import "pages/single";
+@import "pages/search";
+
+//Blocks 
+@import "blocks/banner-carousel";
+@import "blocks/content-listings"; 
+@import "blocks/offer-banner";
+@import "blocks/newsletter";
+@import "blocks/news-events";
+@import "blocks/video";
+@import "blocks/recommendations"; 
+@import "blocks/enquiry"; 
+@import "blocks/two-block"; 
+
+// Browser Support   
+@import "helper/ie";        

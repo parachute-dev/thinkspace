@@ -1,0 +1,133 @@
+.two-block-container-container{
+    overflow:hidden;
+}
+.two-block-container {
+    position: relative;
+
+    .user-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    // FLOAT TO RIGHT IF SELECTED
+    .align-to-right {
+        float: right;
+        margin-right: -30px;
+    }
+
+    .two-block-content-wrapper {
+        ul {
+            margin-bottom: 2em;
+            margin-left: 4em;
+
+            li {
+                font-family: $font-body;
+
+                @include font-size(18px);
+                @include remify(line-height, 25px);
+
+                letter-spacing: 0.85px;
+                position: relative;
+
+                &:before {
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    background-color: colours(brand, pink);
+                    position: absolute;
+                    left: -2em;
+                    top: 5px;
+                    content: "";
+                }
+            }
+        }
+
+        @include remify(padding-top, 90px);
+        @include remify(padding-bottom, 90px);
+
+        @media (min-width: 200px) and (max-width: $screen-xs-max) {
+            @include remify(padding-top, 30px);
+            @include remify(padding-bottom, 30px);
+        }
+
+        h5 {
+            color: colours(brand, grey);
+        }
+
+        h2 {
+            color: colours(brand, blue);
+
+            //  font-size: 3em;
+       
+        }
+
+        p {
+            color: colours(brand, grey);
+            font-kerning: normal;
+        }
+    }
+
+    .image-container {
+        position: static;
+        padding-left: 0; 
+        padding-right: 0;
+    }
+
+    .photo-background-container {
+        width: 100%;
+        height: 100%;
+        content: "";
+        background-position: center center;
+        position: Absolute;
+        left: 0;
+        width: 45.75%;
+        height: 100%;
+        top: 0;
+
+        @media (min-width: 200px) and (max-width: $screen-xs-max) {
+            position: static;
+            height: 40vh;
+            width: 100%;
+        }
+    }
+}
+
+.container-fixed {
+    position: relative; 
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+.two-block-container-container {
+    position: relative;
+}
+
+.two-block-container {}
+
+.two-block-container.align-right .photo-background-container {
+    left: 55% !important;
+}
+
+.two-block-container.align-right .user-content {
+    float: left;
+}
+
+.two-block-container.align-right .image-container {
+    float: right;
+}
+
+@media (min-width: $screen-sm-min) {
+    .two-block-container .user-content {
+        padding-right: 5%;
+                padding-left: 5%;
+
+    }
+
+    .two-block-container.align-right .user-content {
+        padding-left: 5%;
+        padding-right:5%;
+    }
+}

@@ -1,0 +1,68 @@
+.offer-banner {
+    position: relative;
+
+
+    @media (min-width: 200px) and (max-width: $screen-xs-max) {
+        display: block;
+    }
+
+    @include remify(padding, 0px, 0);
+
+    .offer-banner-background {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @media (min-width: 200px) and (max-width: $screen-xs-max) {
+            position: static;
+            margin-left: -15px;
+            margin-right: -15px;
+            height: 20vh;
+            position: static;
+            background-position: center center;
+        }
+    }
+
+    .offer-banner-content {
+        padding: 25px 25px;
+        color: #fff;
+
+        @media (min-width: 200px) and (max-width: $screen-xs-max) {
+            color: #fff;
+            padding-left: 0;
+            background: colours(brand, blue);
+            margin-left: -15px;
+            margin-right: -15px;
+            padding-right: 0;
+        }
+
+        h3 {
+
+           
+
+            @media (min-width: 200px) and (max-width: $screen-xs-max) {
+                font-size: 2.5em;
+            }
+        }
+
+        p {
+            font-kerning: normal;
+            letter-spacing: 1px;
+            padding-bottom: 20px;
+        }
+    }
+}
+
+.offers-container {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include remify(padding-top, 60px);
+    @include remify(padding-bottom, 60px);
+}

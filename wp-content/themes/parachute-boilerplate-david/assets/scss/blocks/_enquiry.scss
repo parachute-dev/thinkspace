@@ -1,0 +1,11 @@
+.container-enquiry{
+
+float:left;
+width:100%;
+clear:both;
+        @include remify(padding,40px,0);
+        color:colours(brand,blue-rich);
+        text-align:center;
+
+
+}

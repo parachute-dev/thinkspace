@@ -1,0 +1,105 @@
+// This file is intended to house default style overrides for plugins such as Slick slider
+// If it becomes more verbose consider splitting it up into individual files to keep things tidy
+
+.slick-prev,
+.slick-next {
+    min-width: 0;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border:0;
+    font-size:0;
+background:black;
+color:white;
+    &:after{
+        content:"<";
+        font-size:20px;
+        text-align:center;
+
+    }
+
+
+
+    @include border-radius(0);
+
+    background: none;
+    border-color: #ffffff;
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    z-index: 90;
+
+    &.slick-prev {
+        right: 110px;
+    }
+
+    &:hover {
+        background: #ffffff;
+
+        .icon {
+            fill: #333333;
+        }
+        color:black;
+    }
+
+    .icon {
+        width: 12px;
+        height: 23px;
+        fill: #ffffff;
+    }
+}
+.slick-next:after{
+content:">";
+}
+
+.slick-dots {
+    margin-bottom: 0;
+    position: absolute;
+    top: 00px;
+    left: 20px;
+    text-align: left;
+
+    @media (min-width: 200px) and (max-width: $screen-sm-max) {
+        text-align: center;
+        margin: 0 auto;
+        left: 0;
+        width: 100%;
+    }
+
+    li {
+        line-height: 0;
+        display: inline-block;
+
+        @media (min-width: 200px) and (max-width: $screen-sm-max) {
+            text-align: center;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        button {
+            width: 15px;
+            height: 15px;
+            background: #171717;
+            position: relative;
+            border: 2px solid white;
+            border-radius: 50%;
+            font-size: 0;
+            background: colours(brand, blue);
+            outline: 0;
+            margin-right: 15px;
+
+            @media (min-width: 200px) and (max-width: $screen-sm-max) {
+                margin-right: 5px;
+                margin-left: 5px;
+            }
+        }
+
+        &.slick-active {
+            button {
+                background: white;
+            }
+        }
+    }
+}

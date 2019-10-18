@@ -1,0 +1,163 @@
+html {
+    font-size: 16px;
+    line-height: 1;
+    font-family:$font-body, "arial", "helvetica", "san-serif";
+
+}
+
+
+h1, .h1 {
+
+    font-family: $font-heading;
+    @include font-size(50px);
+    @include remify(padding-bottom, 15px);
+    line-height: 1;
+    font-weight:bolder;
+
+    @media (min-width: $screen-sm-min) {
+ 
+    }
+
+    @media (min-width: $screen-md-min) {
+        @include font-size(80px);
+
+    }
+
+    @media (min-width: $screen-lg-min) {
+        
+    }
+}
+
+h2, .h2 {
+        font-family: $font-heading;
+
+    @include font-size(48px);
+    @include remify(padding-bottom, 15px);
+    line-height: 1;
+    @media (min-width: $screen-sm-min) {
+ 
+    }
+
+    @media (min-width: $screen-md-min) {
+    
+    }
+
+    @media (min-width: $screen-lg-min) {
+        
+    }
+}
+
+h3, .h3 {
+        font-family: $font-heading;
+font-weight:bold;
+    @include font-size(28px);
+    @include remify(padding-bottom, 15px);
+    line-height: 1;
+    @media (min-width: $screen-sm-min) {
+ 
+    }
+
+    @media (min-width: $screen-md-min) {
+    
+    }
+
+    @media (min-width: $screen-lg-min) {
+        
+    }
+}
+
+h4, .h4 {
+        font-family: $font-heading;
+
+    @include font-size(24px);
+    @include remify(padding-bottom, 15px);
+    line-height: 1;
+    @media (min-width: $screen-sm-min) {
+ 
+    }
+
+    @media (min-width: $screen-md-min) {
+    
+    }
+
+    @media (min-width: $screen-lg-min) {
+        
+    }
+}
+
+h5, .h5 {
+    font-family: $font-heading;
+font-weight:500;
+    @include font-size(20px);
+    @include remify(padding-bottom, 15px);
+    line-height: 1;
+    @media (min-width: $screen-sm-min) {
+ 
+    }
+
+    @media (min-width: $screen-md-min) {
+    
+    }
+
+    @media (min-width: $screen-lg-min) {
+        
+    }
+}
+
+h6, .h6 {
+    font-family: $font-heading;
+
+    @include font-size(16px);
+    @include remify(padding-bottom, 15px);
+    line-height: 1;
+    @media (min-width: $screen-sm-min) {
+ 
+    }
+
+    @media (min-width: $screen-md-min) {
+    
+    }
+
+    @media (min-width: $screen-lg-min) {
+        
+    }
+
+ 
+}
+
+p, li {
+    font-family: $font-body;
+    font-weight: 400;
+    line-height:1.5; 
+
+    @include font-size(16px);
+    @include remify(padding-bottom, 15px);
+
+    @media (min-width: $screen-sm-min) {
+
+    }
+
+    @media (min-width: $screen-md-min) {}
+
+    @media (min-width: $screen-lg-min) {
+    }
+}
+
+table {
+    h2, h3, h4, h5, h6 {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

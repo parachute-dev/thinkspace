@@ -1,0 +1,182 @@
+.container-wrap {
+    float: left;
+    clear: both;
+    width: 100%;
+}
+
+.container-fluid {
+    float: left;
+    clear: both;
+    width: 100%;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+
+.text-center,
+.text-centre {
+    text-align: center; 
+}
+
+.list-inline {
+    li {
+        display: inline-block;
+    }
+}
+
+.alignright {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.alignleft {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.aligncenter {
+    display: block;
+    margin: 0 auto 30px auto;
+}
+
+@media (min-width: $screen-sm-min) {
+    .row.is-flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .row.is-flex > [class*='col-'] {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row.is-flex {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .row.is-flex > [class*='col-'] {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .row.is-flex:before,
+    .row.is-flex:after {
+        content: normal;
+
+        // IE doesn't support `initial`
+
+    }
+}
+
+.height-medium{
+    min-height:65vh!important;
+}
+
+.height-large{
+    min-height:85vh!important
+}
+
+.height-small{
+    min-height:45vh!important;
+}
+
+.text-right{
+    text-align:right;
+
+}
+.text-left{
+    text-align:left;
+}
+.text-center, .text-centre{
+    text-align:center;
+}
+.align-right{
+    .image-container{
+        .background-image{
+            right:0;
+            left:auto;
+        }
+
+    }
+}
+
+.position-vertical-center, .position-vertical-centre {
+    justify-content: center!important;
+            .banner-content{
+        justify-content: center!important;
+    }  
+}
+
+.position-vertical-top{
+    justify-content: flex-start!important;
+           .banner-content{
+        justify-content: flex-start!important;
+    }  
+}
+
+.position-vertical-bottom{
+    justify-content: flex-end!important;
+       .banner-content{
+        justify-content: flex-end!important;
+    }  
+}
+
+.position-horizontal-center,.position-horizontal-centre{
+    align-items:center!important;
+
+    .banner-content{
+        align-items: center!important;
+    }
+}
+
+
+.position-horizontal-left{
+    align-items:flex-start;
+        .banner-content{
+        align-items: flex-start!important;
+    }
+}
+
+.position-horizontal-right{
+    align-items:flex-end;
+        .banner-content{
+        align-items: flex-end!important;
+    }
+}
+
+.background-image {
+    background-image: url("../img/home-carousel.png");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    content: "";
+
+    @media (min-width: $screen-sm-min) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+    }
+}

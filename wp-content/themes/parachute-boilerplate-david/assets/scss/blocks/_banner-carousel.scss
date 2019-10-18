@@ -1,0 +1,150 @@
+.container-banner-carousel {
+    position:relative;
+}
+#banner-paging-container{
+        position: absolute;
+    bottom: 40px;
+    width:100%;
+}
+#banner-paging {
+position: relative;
+    opacity: 0;
+    z-index:10;
+    animation: fade-in 1s ease-in-out 2s 1 forwards;
+
+    @media (min-width: $screen-md-min) {
+        top: 0;
+    }
+     
+    li {
+        opacity: 0;
+
+        &:nth-child(1) {
+            animation: fade-in 0.25s ease-in-out 2s 1 forwards;
+        }
+
+        &:nth-child(2) {
+            animation: fade-in 0.25s ease-in-out 2.15s 1 forwards;
+        }
+
+        &:nth-child(3) {
+            animation: fade-in 0.25s ease-in-out 2.3s 1 forwards;
+        }
+
+        &:nth-child(4) {
+            animation: fade-in 0.25s ease-in-out 2.45s 1 forwards;
+        }
+
+        &:nth-child(5) {
+            animation: fade-in 0.25s ease-in-out 2.6s 1 forwards;
+        }
+
+        &:nth-child(6) {
+            animation: fade-in 0.25s ease-in-out 2.75s 1 forwards;
+        }
+    }
+}
+
+    .overhang {
+        // @media (min-width: $screen-md-min) {
+        //     position: absolute;
+        //     left: -45%;
+        //     top: -20%;
+        //     height: 200%;
+        //     background: colours(brand, blue);
+        //     content: "";
+        //     min-width: 100%;
+        //     color: #fff;
+        //     transform: rotate(68deg);
+
+        //     &:after {
+        //         background-image: url("../img/banner-overhang.png?V=2");
+        //         width: 100%;
+        //         height: 100px;
+        //         position: absolute;
+        //         right: -50px;
+        //         background-size: contain;
+        //         content: "";
+        //         background-position: center center;
+        //         background-repeat: no-repeat;
+        //         top: -50px;
+        //     }
+        // }
+
+        // @media (min-width: $screen-md-min) {
+        //     left: -55%;
+        //     transform: rotate(75deg);
+        // }
+
+        // @media (min-width: $screen-lg-min) {
+        //     left: -47%;
+        // }
+
+        // @media (min-width: $screen-lg-max) {
+        //     left: -39%;
+        // }
+    }
+    
+
+.banner-carousel {
+   position:static!important;
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+
+    .background-image{
+        width:100%;
+    }
+
+
+    .banner-content {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        min-height:80vh;
+
+            opacity:0;
+                    transform:translate3d(-0,-20px,0);
+
+                animation: fade-in-up 1.5s ease-in-out 0.5s 1 forwards;
+
+        @media (max-width: $screen-sm-max) {
+            text-align: center;
+            min-height: inherit;
+            padding-top: 2em;
+            padding-bottom: 10em;
+            display: inline-block;
+
+            &:after {
+                position: absolute;
+                top: -11px;
+                height: 20px;
+                width: 120%;
+                left: -10%;
+                background-size: cover;
+                content: "";
+                background-image: url("../img/banner-overhang.png?V=2");
+            }
+        }
+
+        h2 {
+            color: colours(brand, blue-dark);
+            padding-bottom: 0;
+            position:relative;
+
+
+        }
+
+        h1 {
+            color: #fff;
+                        position:relative;
+
+        }
+
+        p {
+            color: #fff;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.container-video, .container-video-carousel{
+	clear:both;
+	width:100%;
+	float:left;
+	min-height:40vh;
+	color:#fff;
+	text-align:center;
+
+	.slick-arrow{
+		display:none!important
+	}
+	.video-carousel{
+		max-width:650px;
+		margin:0 auto;
+		.slick-list{
+			overflow: initial!important;
+		}
+	}
+	@include remify("padding",50px, 0, 90px,00px);
+		.video{
+			float:left;		
+		}
+	h2{
+		@include remify("padding",00px,0px,50px,0)
+
+	}
+	.slick-dots{
+		top:auto;
+		bottom:-30px;
+		text-align:center;
+		width:100%;
+		left:0;
+	}
+	.slick-slide{
+		transition:0.2s ease-in all;
+	}
+	.slick-slide:not(.slick-current){
+		transform:scale(0.8);
+	}
+}
+

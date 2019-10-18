@@ -1,0 +1,105 @@
+.dropdown-menu{
+    margin-bottom:0;
+
+    &.active{
+        border-bottom:2px solid #e8e8e8;
+
+        &:last-of-type{
+            border-bottom:none;
+        }
+    }
+
+    .dropdown-title{
+        border-bottom:2px solid #e8e8e8;
+        position:relative;
+
+        &,
+        .button{
+            @include font-size(24px);
+            color:#333333;
+        }
+
+        > a,
+        .button{
+            width:100%;
+            @include remify(padding, 30px, 20px);
+            background:#ffffff;
+            @include border-radius(0);
+            border:none;
+            text-align:left;
+            display:block;
+
+            .icon-container{
+                margin-top:-10px;
+                position:absolute;
+                top:50%;
+                right:20px;
+                @include transition(all 100ms ease-in-out);
+
+                &,
+                .icon{
+                    width:20px;
+                    height:20px;
+                }
+            }
+
+            .icon.dropdown-minus-animated{
+                height:3px;
+                position:absolute;
+                top:0;
+                right:0;
+                @include transform(rotate(90deg) translate(42%, 0%));
+                @include transition(all 100ms ease-in);
+            }
+
+            &:hover{
+                color:#333333;
+                text-decoration:underline;
+
+                .icon-container{
+                    @include transform( scale(1.25) );
+                }
+            }
+        }
+    }
+
+    .dropdown-item{
+        @include remify(padding, 0, 15px);
+        display:none;
+
+        &.active{
+            display:block;
+        }
+
+        &:before{
+            content:"";
+            content:none;
+        }
+    }
+
+    &.active{
+        border-bottom:2px solid #e8e8e8;
+
+        .dropdown-title{
+            .button{
+                .icon.dropdown-minus-animated{
+                    top:42%;
+                    @include transform(rotate(0deg) translate(0%, 0%));
+                }
+            }
+        }
+
+        .dropdown-item{
+            @include remify(padding, 0, 15px);
+        }
+    }
+
+    @media(max-width:$screen-sm-min){
+        .dropdown-title{
+            &,
+            .button{
+                @include font-size(16px);         
+            }
+        }
+    }
+}

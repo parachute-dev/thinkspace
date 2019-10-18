@@ -1,0 +1,260 @@
+@mixin button {
+
+    transition: all 0s ease-in;
+    position: relative;
+    transform: translateZ(0);
+
+    overflow: hidden;
+    transition-delay: initial !important;
+    @include remify(padding, 10px, 25px);
+  @include font-size(16px);
+
+    background: colours(mono,black);
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    border: 2px solid transparent;
+
+border-radius:50px;
+    display: inline-block;
+
+
+    &:active {
+
+    }
+
+    &:before {
+
+    }
+
+    &:hover {
+    
+    }
+
+    @media (min-width: $screen-sm-min) {
+      
+    }
+
+
+  &.pink-button, &.button-pink{
+    background:colours(brand,pink);
+  }
+
+    @media (min-width: $screen-sm-max) {
+        @include font-size(15px);
+        @include remify(padding, 15px, 25px);
+    }
+
+
+    + .button {
+        @include remify("margin-left",15px);
+        @media (min-width: $screen-sm-max) {
+        @include remify("margin-left",20px);
+        }
+    }
+
+    &.button-outline {
+        background: none;
+        border: 2px solid colours(brand,dark);
+        color: colours(blue,dark);
+
+        @media (min-width: $screen-sm-min) {
+            &:hover {
+                color: colours(blue,dark);
+            }
+        }
+    }
+
+    &.outline_white, .outline-white {
+        background: transparent;
+        border-color: white;
+        color: white;
+    }
+
+    &.outline_black, .outline-black {
+        background: transparent;
+        border-color: colours(mono,black);
+        color: colours(mono,black);
+
+        &:before {
+            background: colours(mono,black);
+        }
+
+        @media (min-width: $screen-sm-min) {
+            &:hover {
+                color: white;
+            }
+        }
+    }
+
+    &.solid_orange, .solid-orange {
+        background: colours(orange,dark);
+        border-color: transparent;
+        color: white;
+
+        @media (min-width: $screen-sm-min) {
+            &:hover {
+                color: colours(orange,dark);
+            }
+        }
+
+        &:before {
+            background-color: white !important;
+        }
+    }
+
+    &.outline_white, .outline_white {
+        &:hover {
+            color: colours(orange,dark);
+        }
+
+        &:before {
+            background-color: white !important;
+        }
+    }
+
+    &.solid_white, .solid-white {
+        background: white;
+        border-color: transparent;
+        color: colours(orange,dark);
+
+        @media (min-width: $screen-sm-min) {
+            &:hover {
+                color: white !important;
+            }
+        }
+
+        &:before {
+            background-color: colours(orange,dark) !important;
+        }
+    }
+
+    &.solid_blue_dark, .solid-blue-dark, .solid-dark-blue {
+        background: colours(blue,dark);
+        color: white;
+        border-color: transparent;
+    }
+
+    &:visited {}
+
+    .button-text {
+        transition: all 0.2s ease-in;
+    }
+
+    &[class*=" play"] {
+        border-radius: 0;
+        border: 3px solid colours(orange,dark);
+        background: none;
+        height: 60px;
+        width: 60px;
+        line-height: 55px;
+        text-align: center;
+        padding: 0;
+        font-size: 0;
+        text-align: center;
+
+        &:after {
+            font-family: FontAwesome;
+            content: "\f04b";
+            font-size: 24px;
+            left: -2px;
+            color: colours(orange,dark);
+            position: relative;
+            display: inline-block;
+            margin-left: 0;
+        }
+    }
+
+    &.loader .loading {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        i {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+         
+
+            transition: all 0.8s ease-in;
+        } 
+    }
+
+    &.finished {
+        transform: scale(1) translateZ(0);
+        pointer-events: none;
+
+        .button-text {
+            width: auto;
+            height: auto;
+            opacity: 0;
+            visibility: visible;
+            point-events: none;
+        }
+    }
+
+    &.loaded {
+        transition: all 0.52s ease-in-out;
+        width: 0px !important;
+        z-index: 9999;
+
+        .button-text {
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+            displaY: inline-block;
+            min-width: 0;
+        }
+
+        transform-origin: center;
+        transform: scale(100) translateZ(0);
+        transition-delay: 0.15s;
+        z-index: 99999;
+        position: relative;
+        -webkit-perspective: 1000;
+        -webkit-backface-visibility: hidden;
+        border: 0;
+    }
+
+    &.loading {
+        position: relative;
+    }
+
+    &.loading {
+        transition: all 0.2s ease-in;
+        width: 100px !important;
+
+        .loading {
+            transition: all 0.8s ease-in;
+            opacity: 1;
+            width: 100px;
+
+            i {
+                width: 10px;
+                height: 10px;
+                display: inline-block;
+                background: white;
+                margin: 0 5px;
+                border-radius: 50%;
+                opacity: 1;
+                position: static;
+            }
+        }
+
+        .button-text {
+            opacity: 0;
+            left: -200%;
+            width: 250px;
+            display: inline-block;
+            position: relative;
+            transition: all 0.2s ease-in;
+        }
+    }
+}
+
+.button{
+    @include button;
+}

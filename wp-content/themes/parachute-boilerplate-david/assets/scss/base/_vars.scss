@@ -1,0 +1,164 @@
+// Sass vars can go here, for instance you might have variables containing arrays for use with outputting themes, example below!
+
+// Variables
+// Departmental themes format (SASS arrays have a base index of 1)
+//
+// Theme array format
+// 1. purple - Slug
+// 2. #a364d9 - Main colour
+// 3. #4e504b - Secondary for button hovers etc.
+// 4. #7c42ba - Case Study triangle accent & footer icons
+// 5. #dad1e3 - Case Study sub-content inner
+// 6. #ffffff - Page Footer List dt
+// 7. #?????? - Additional colour for yellow buttons where white text doesn't work
+//
+
+/*
+$purple_theme: 'purple', #a364d9, #4e504b, #7c42ba, #dad1e3, #ffffff;
+$dark_purple_theme: 'dark-purple', #813375, #4e504b, #66215c, #e3d1e0, #ffffff;
+$pink_theme: 'pink', #ee6579, #4e505b, #ce425d, #ce425d, #ffffff;
+$light_red_theme: 'light-red', #db3937, #4e504b, #ba1a1a, #e3d1d1, #ffffff;
+$red_theme: 'red', #8a1532, #4e504b, #6c1429, #e3d1d5, #ffffff;
+$orange_theme: 'orange', #f4641d, #4e504b, #d64e12, #e3d7d1, #ffffff;
+$clay_theme: 'clay', #d66b2a, #4e504b, #b1591f, #e3d8d1, #ffffff;
+$gold_theme: 'gold', #f8a227, #4e504b, #db841d, #e3dbd1, #ffffff;
+$yellow_theme: 'yellow', #fecc2f, #4e504b, #d8a516, #e3dfd1, #ffffff, #231f20;
+// $green_theme: 'green', #369b47, #4e504b, #2a873a, #d1e3d4, #ffffff;
+$green_theme: 'green', #2da855, #4e504b, #2a873a, #d1e3d4, #ffffff;
+$light_green_theme: 'light-green', #aec423, #4e505b, #a1af17, #e1e3d1, #ffffff;
+$olive_theme: 'olive', #5e7033, #4e504b, #3d4e1e, #dde3d1, #ffffff;
+$teal_theme: 'teal', #04979b, #4e504b, #0b7779, #d1e2e3, #ffffff;
+$cyan_theme: 'cyan', #33beb7, #4e504b, #25a59b, #d1e3e2, #ffffff;
+$blue_theme: 'blue', #40a4d8, #4e504b, #2c92bf, #d1dde3, #ffffff;
+$dark_blue_theme: 'dark-blue', #09112e, #4e504b, #050c1e, #09112e, #ffffff;
+$royal_blue_theme: 'royal-blue', #1e196a, #4e504b, #09004c, #1e196a, #ffffff;
+$fuchsia_theme: 'fuchsia', #d0157d, #4e504b, #ad0768, #e3d1db, #ffffff;
+
+$themes:
+  (
+    $purple_theme,
+    $dark_purple_theme,
+    $pink_theme,
+    $light_red_theme,
+    $red_theme,
+    $orange_theme,
+    $clay_theme,
+    $gold_theme,
+    $yellow_theme,
+    $green_theme,
+    $light_green_theme,
+    $olive_theme,
+    $teal_theme,
+    $cyan_theme,
+    $blue_theme,
+    $dark_blue_theme,
+    $royal_blue_theme,
+    $fuchsia_theme
+  );
+  */
+
+// $black_th: 'black', #333333;
+// $pink_th: 'pink', #E5007D;
+// $light_green_th: 'light-green', #1EB372;
+// $sky_blue_th: 'sky-blue', #A8CFDD;
+// $light_blue_th: 'light-blue', #5692CE;
+// $purple_th: 'purple', #6A2383;
+// $purple_light_th: 'purple', #987db3;
+// $grey_th: 'grey', #9F9490;
+// $dark_grey_th: 'dark-grey', #333333;
+// $gold_th: 'gold', #F8B054;
+// $teal_th: 'teal', #7BC5BF;
+// $white_th: 'white', #ffffff;
+// $transparent_th : 'transparent', 'transparent';
+
+$colour: (
+  mono: (
+    black: #333, 
+    white: #fff,
+    grey: #bbb
+    ), 
+  brand: (
+    main: #060d58,
+    secondary: #e93395, 
+    grey: #0F1820, 
+    black: #222222,
+    pink: #e93395,
+    blue: #060d58,
+    yellow: #ffc961,
+
+  
+    ),
+  blue: (
+    dark: "", 
+    ),
+  orange: (
+    dark: "", 
+    ),
+  red: (
+    dark: "", 
+    ),
+  white: (
+    dark: "", 
+    ),   
+); 
+
+
+$common-variables: (
+  padding: (
+    container-tiny: 15px, 
+    container-small: 40px, 
+    container-medium: 50px, 
+    container-large: 60px,
+    ), 
+  margin: (
+    container-tiny: 15px, 
+    container-small: 40px, 
+    container-medium: 50px, 
+    container-large: 60px,
+    )
+ 
+); 
+  
+
+@function colours($type, $subtype: 'base') {
+  @return map-get(map-get($colour, $type), $subtype);
+}  
+  
+@function common-variables($type, $subtype: 'base') {
+  @return map-get(map-get($common-variables, $type), $subtype);
+}  
+
+  
+
+ 
+$font-heading: 'Montserrat', sans-serif; 
+$font-heading_alt: 'Montserrat', sans-serif;
+$font-body: 'Montserrat', sans-serif;
+$font-body_alt: 'Montserrat', sans-serif;
+
+
+// Social Colors
+// ====================================================================
+
+$colour-facebook: hsla(222, 47%, 40%, 1); // #365397
+$colour-twitter: hsla(198, 100%, 47%, 1); // #00a9f1
+$colour-linkedin: hsla(203, 100%, 35%, 1); // #006db3
+$colour-apple: hsla(0, 0%, 45%, 1); // #737373
+$colour-google: hsla(217, 89%, 61%, 1); // #4285f4
+$colour-google_plus: hsla(8, 74%, 53%, 1); // #e0452c
+$colour-youtube: hsla(0, 100%, 60%, 1); // #ff3333
+$colour-vimeo: hsla(200, 82%, 61%, 1); // #48b6ed
+$colour-pinterest: hsla(0, 78%, 45%, 1); // #ce1a19
+$colour-yelp: hsla(5, 100%, 38%, 1); // #c30f00
+$colour-dribbble: hsla(338, 82%, 60%, 1); // #ed4584
+$colour-amazon: hsla(36, 100%, 50%, 1); // #ff9700
+$colour-ebay: hsla(219, 89%, 30%, 1); // #083790
+$colour-skype: hsla(198, 100%, 48%, 1); // #00acf4
+$colour-instagram: hsla(208, 46%, 41%, 1); // #396d9a
+$colour-dropbox: hsla(206, 89%, 46%, 1); // #0d84de
+$colour-flickr: hsla(334, 100%, 46%, 1); // #ea0066
+$colour-github: hsla(0, 0%, 18%, 1); // #2f2f2f
+$colour-basecamp: hsla(121, 38%, 58%, 1); // #6bbd6d
+$colour-tumblr: hsla(210, 37%, 30%, 1); // #304c68
+$colour-foursquare: hsla(206, 72%, 45%, 1); // #207dc5
+$colour-box: hsla(204, 83%, 40%, 1); // #1277bc

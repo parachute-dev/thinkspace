@@ -1,0 +1,9 @@
+.banner{
+    display:flex;
+    background:colours(mono,black);
+    color:#fff;
+    @include remify(margin, 0, 0, common-variables(margin, container-medium), 0);
+    .banner-inner{
+        width:100%;
+    }
+}

@@ -1,0 +1,75 @@
+.social-feeds-block{
+    @include remify(margin, 40px, 0);
+    
+    .social-feeds-block-list{
+        margin-bottom:0;
+
+        .social-feed-block{
+            @include remify(padding, 20px);
+
+            .social-feed-block-inner-header{
+                @include remify(margin-bottom, 40px);
+                display:flex;
+                flex:1;
+                align-items:center;
+                justify-content:space-between;
+
+                .social-feed-block-title{
+                    margin-bottom:0;
+
+                    &,
+                    a{
+                        color:#333333;
+                    }
+
+                    a{
+                        display:flex;
+                        flex:1;
+                        align-items:center;
+                    }
+
+                    .icon-container{
+                        @include remify(margin-right, 8px);
+
+                        .icon{
+                            width:38px;
+                            height:38px;
+                            fill:#666666;
+                        }
+                    }
+                }
+            }
+
+            .social-feed-block-content-list{
+                margin-bottom:0;
+
+                .content-item{
+                    padding-right:15px;
+                    padding-left:15px;
+
+                    .content-item-footer{
+                        .button{
+                            width:100%;
+                            @include remify(padding-right, 8px);
+                            @include remify(padding-left, 8px);
+                            font-weight:500;
+                            border:none;
+                            display:block;
+
+                            .icon-container{
+                                &:before{
+                                    content:"";
+                                    content:none;
+                                }
+
+                               .icon{
+                                   fill:#333333;
+                               } 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

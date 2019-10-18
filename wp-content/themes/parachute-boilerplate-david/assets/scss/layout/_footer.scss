@@ -1,0 +1,52 @@
+#footer{
+    @include remify(padding, common-variables(padding, container-large), 0, common-variables(padding, container-tiny), 0 );
+    color:#fff;
+    background:colours(brand,black);
+    text-align:left;
+      float:left;
+        clear:both;
+        width:100%;
+    a{
+        color:#fff;
+
+    }
+    #footer-top{
+        float:left;
+        clear:both;
+        width:100%;
+    }
+
+        #footer-bottom{
+        float:left;
+        clear:both;
+        width:100%;
+    }
+    .navigation-footer{
+        ul{
+            li{
+              
+             
+                    &:after {
+                        content: "/";
+                    }
+                    &:last-child {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                    a {
+                        color: colours(mono, white);
+                        @include remify(padding, 10px);
+                        display:inline-block;
+                    }
+                }
+       
+        }
+    }
+    #footer-copyright{
+        p{
+            padding:0;
+        }
+    }
+}
+

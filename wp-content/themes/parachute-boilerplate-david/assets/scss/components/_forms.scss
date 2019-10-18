@@ -1,0 +1,37 @@
+form {
+    textarea, input[type=password], input[type=text], input[type=email], input[type=tel], select {
+        width: 100%;
+        display: block;
+        box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.1);
+        font-family: $font-heading;
+        @include font-size(16px);
+        border: 1px solid #ccc;
+        @include remify("line-height",45px);
+         @include remify("text-indent",15px);
+        @include remify("margin-bottom",15px);
+    }
+
+    textarea {
+        min-height: 250px;
+        max-height:250px;
+    }
+
+    label {
+        font-family: $font-heading;
+        @include font-size(18px);
+        display: inline-block;
+    }
+
+    button {
+        @include button;
+        width: 100%;
+    }
+
+    input[type=submit] {
+        background-color: colours(brand,primary);
+        color: #fff;
+        width: auto;
+        font-family: $font-heading;
+        @include button;
+    }
+} 
